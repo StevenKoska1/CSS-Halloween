@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <m  eta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
@@ -22,8 +22,8 @@
                 <p class="price">Starting from €0.99</p>
                 <p>Drinks</p>
             </div>
-        </diFv>
-        <div class="menu">
+        </div>
+       
             <nav class="menu">
             <button aria-expanded="false" aria-controls="menu-list">
             <span class="open">☰</span>
@@ -33,15 +33,62 @@
             <ul id="menu-list">
                 <li>
                     <a href="#">Snacks</a>
+                </li>
+                <li>
                     <a href="#">Drinks</a>
-                    <a href="#">Desserts</a>
+                </li>
+                <li>
+                    <a href="#">Food</a>
+                </li>
+                <li>
                     <a href="#">Reservation</a>
                 </li>
-
             </ul>
         </nav>
+        
+        <div class="about">
+            <img src="img/pumpkinpie.jpg" alt="Pumpkin pie">
+            <div class="details">
+                <h2>Featured Pumpkin Pie</h2>
+                <p>Tastes Terribly good!</p>
+                <p>This is the pie you've been looking for...</p>
+                <button>Learn more</button>
+            </div>
+        </div>
+        <div class="gallery">
+            <h2>Instant Grams</h2>
+            <img src="https://source.unsplash.com/random/201x201" alt="">
+            <img src="https://source.unsplash.com/random/201x202" alt="">
+            <img src="https://source.unsplash.com/random/201x203" alt="">
+            <img src="https://source.unsplash.com/random/202x201" alt="">
+            <img src="https://source.unsplash.com/random/203x201" alt="">
+            <img src="https://source.unsplash.com/random/202x202" alt="">
+            <img src="https://source.unsplash.com/random/202x203" alt="">
+            <img src="https://source.unsplash.com/random/203x201" alt="">
+            <img src="https://source.unsplash.com/random/203x202" alt="">
+            <img src="https://source.unsplash.com/random/203x203" alt="">
+            <img src="https://source.unsplash.com/random/204x201" alt="">
+            <img src="https://source.unsplash.com/random/204x202" alt="">
+            <img src="https://source.unsplash.com/random/204x203" alt="">
+            <img src="https://source.unsplash.com/random/204x204" alt="">
+            <img src="https://source.unsplash.com/random/201x204" alt="">
+            <img src="https://source.unsplash.com/random/202x204" alt="">
+            <img src="https://source.unsplash.com/random/203x204" alt="">
+            <img src="https://source.unsplash.com/random/205x201" alt="">
+
         </div>
     </div>
+
+    <script>
+        const menuButton = document.querySelector('button [aria-expanded]');
+        function toggleMenu({target}){
+            const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+            menuButton.setAttribute('aria-expanded', !expanded);
+            console.log("Toggled!");
+        }
+
+        menuButton.addEventListener('click', toggleMenu);
+    </script>
 
 </body>
 </html>

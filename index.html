@@ -80,10 +80,12 @@
     </div>
 
     <script>
-        const menuButton = document.querySelector('button [aria-expanded]');
+        const menuButton = document.querySelector('button[aria-expanded]');
+
         function toggleMenu({target}){
             const expanded = target.getAttribute('aria-expanded') === 'true' || false;
             menuButton.setAttribute('aria-expanded', !expanded);
+            console.log('Aria Expanded vale', !expanded);
             console.log("Toggled!");
         }
 
